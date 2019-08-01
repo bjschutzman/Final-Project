@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import Navs from "./components/Navbar";
 import Jumbo from "./components/Jumbotron";
-import Cards from "./components/Cards";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import "./App.css";
+import Recipes from "./components/Recipes";
+import Ingredients from "./components/Ingredients";
 
 class App extends Component {
   render() {
@@ -12,7 +15,16 @@ class App extends Component {
       <div>
         <Navs />
         <Jumbo />
-        <Cards />
+        <Container>
+          <Row>
+            <Col>
+              <Recipes />
+            </Col>
+            <Col>
+              <Ingredients />
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
