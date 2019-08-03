@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./Cards.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
@@ -12,14 +12,14 @@ const Cards = () => (
       <Row>
         <Col>
           <Card>
-            <Card.Header as="h5">Recipes</Card.Header>
+            <Card.Header as="h5">Cocktail Recipes</Card.Header>
             <Card.Body>
-              <Card.Title>Special title treatment</Card.Title>
+              <Card.Title>These drinks match your results</Card.Title>
               <Card.Text>
                 With supporting text below as a natural lead-in to additional
                 content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">See Ingredients</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -27,12 +27,12 @@ const Cards = () => (
           <Card>
             <Card.Header as="h5">Ingredients</Card.Header>
             <Card.Body>
-              <Card.Title>Special title treatment</Card.Title>
+              <Card.Title>These ingredients are needed to make the drink.</Card.Title>
               <Card.Text>
                 With supporting text below as a natural lead-in to additional
                 content.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Buy Ingredients</Button>
             </Card.Body>
           </Card>
         </Col>

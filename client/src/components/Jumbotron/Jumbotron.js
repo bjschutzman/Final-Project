@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./Jumbotron.css";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
@@ -10,10 +10,10 @@ const Jumbo = () => (
   <div>
     <Jumbotron fluid>
       <Container>
-        <h1>Final Project</h1>
+        <h1>Cocktail Wizard</h1>
         <p>
-          Words Words Words Words Words Words Words Words Words Words Words
-          Words Words Words Words Words Words Words Words Words{" "}
+          Search for your desired cocktail and see what it takes to make it. Then, 
+          create a shopping cart of the items your need to make your favorite drink.{" "}
         </p>
         <InputGroup className="mb-3">
           <FormControl
