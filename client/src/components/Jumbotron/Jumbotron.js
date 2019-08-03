@@ -8,12 +8,13 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 
 const Jumbo = () => (
   <div>
-    <Jumbotron fluid>
+    <Jumbotron fluid className="backImage">
       <Container>
         <h1>Cocktail Wizard</h1>
         <p>
-          Search for your desired cocktail and see what it takes to make it. Then, 
-          create a shopping cart of the items your need to make your favorite drink.{" "}
+          Search for your desired cocktail and see what it takes to make it.
+          Then, create a shopping cart of the items your need to make your
+          favorite drink.{" "}
         </p>
         <InputGroup className="mb-3">
           <FormControl
