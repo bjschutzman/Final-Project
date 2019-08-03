@@ -9,12 +9,14 @@ h1 {
   font-size: 50px;
   font-weight: bold;
   padding: 0px 0 20px 0;
+  color: white;
 }
 
-h2 {
+p {
   text-align: center;
   font-size: 25px;
   padding-bottom: 40px;
+  color: white;
 }
 
 .backImage {
