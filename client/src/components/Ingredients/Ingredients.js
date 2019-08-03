@@ -1,12 +1,12 @@
 import React from "react";
-import "./style.css";
+import "./Ingredients.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-const Recipes = () => (
+const Ingredients = () => (
   <div>
     <Card>
-      <Card.Header as="h5">Recipes</Card.Header>
+      <Card.Header as="h5">Ingredients</Card.Header>
       <Card.Body>
         <Card.Title>Special title treatment</Card.Title>
         <Card.Text>
@@ -18,4 +18,4 @@ const Recipes = () => (
   </div>
 );
 
-export default Recipes;
+export default Ingredients;
