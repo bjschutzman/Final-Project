@@ -8,11 +8,11 @@ const Recipes = () => (
     <Card>
       <Card.Header as="h5">Recipes</Card.Header>
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
+        <Card.Title>These results match your search.</Card.Title>
         <Card.Text>
           With supporting text below as a natural lead-in to additional content.
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">See Ingredients</Button>
       </Card.Body>
     </Card>
   </div>

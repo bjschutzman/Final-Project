@@ -8,11 +8,11 @@ const Ingredients = () => (
     <Card>
       <Card.Header as="h5">Ingredients</Card.Header>
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
+        <Card.Title>Cocktail Ingredients</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+          These are used to make your cocktail.
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Make Shopping List</Button>
       </Card.Body>
     </Card>
   </div>
