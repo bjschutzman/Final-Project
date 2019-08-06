@@ -19,15 +19,5 @@ class App extends Component {
   }
 }
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <Navs />
-//         <Jumbo />
-//         <Cards />
-//       </div>
-//     );
-//   }
-// }
+
 export default App;

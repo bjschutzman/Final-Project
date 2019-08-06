@@ -6,12 +6,13 @@ import FormControl from "react-bootstrap/FormControl";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
-const Jumbo = () => (
+const Jumbo = (props) => {
+  return(
   <div>
     <Jumbotron fluid className="backImage">
       <Container>
         <h1>Cocktail Wizard</h1>
-        <p>
+        <p className = 'paragraph'>
           Search for your desired cocktail and see what it takes to make it.
           Then, create a shopping cart of the items your need to make your
           favorite drink.{" "}
@@ -21,14 +22,16 @@ const Jumbo = () => (
             placeholder="Recipe Search"
             aria-label="Recipe Search"
             aria-describedby="basic-addon2"
+            onChange={props.handleChange}
           />
           <InputGroup.Append>
-            <Button variant="outline-secondary">Search</Button>
+            <Button variant="outline-secondary" onClick = {props.handleClick}>Search</Button>
           </InputGroup.Append>
         </InputGroup>
       </Container>
     </Jumbotron>
   </div>
-);
+  )
+  };
 
 export default Jumbo;
