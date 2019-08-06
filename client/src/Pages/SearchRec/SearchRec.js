@@ -15,30 +15,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Search extends Component {
   state = {
     drinks: [],
-    userInput: ''
+    userInput: '',
+    selectedDrink: null
   };
 
-
-//   componentDidMount () {
-//     axios.get( "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" )
-//         .then( response => {
-          
-//           const drinks = response.data.slice(0, 4);
-//             const newDrinkList = drinks.map(drink => {
-//                 return {
-//                     ...drink,
-//                 }
-//                 console.log(Array.isArray(drink))
-                
-//             });
-//             for (var i = 0; i < 5; i++) {
-//               console.log(response.data.drinks[i]);
-//             this.setState({drinks: newDrinkList});
-//             // console.log( response );
-//             }
-//         } )
-        
-// }
 
 handleFormSubmit = event => {
   // When the form is submitted, prevent its default behavior, get recipes update the recipes state
@@ -49,8 +29,29 @@ handleFormSubmit = event => {
     
 };
 
+// will take the drink that was clicked and 
+handleDrinkClick = (drink) => {
+  
+  console.log('DRINK:', drink)
+  this.setState({selectedDrink: drink});
+  // API.handleDrinkClick(this.state.drinkClicked)
+  //   .then(res => this.setState({ drinkClicked: res.data.drinks.strDrink}))
+  //   .catch(err => console.log(err));
+}
+
+// will take the drink clicked by the user and set the state to that drink
+userDrinkClicked = event => {
+  event.preventDefault();
+  const valueTwo = event.target.value;
+  console.log(event)
+  this.setState({
+    drinkClicked: valueTwo
+  })
+}
+
+
+
 handleChange = event => {
-  console.log('CHANGING TEXT');
   const value = event.target.value;
   this.setState({
     userInput: value
@@ -69,10 +70,14 @@ handleChange = event => {
           <Container>
             <Row>
               <Col>
-                <Recipes drinks={this.state.drinks} />
+                <Recipes 
+                  drinks={this.state.drinks} 
+                  key = {this.idDrink}
+                  handleClick={this.handleDrinkClick}
+                />
               </Col>
               <Col>
-                <Ingredients />
+                <Ingredients selectedDrink={this.state.selectedDrink} />
               </Col>
             </Row>
           </Container>

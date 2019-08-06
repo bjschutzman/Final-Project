@@ -5,5 +5,9 @@ import axios from "axios";
 export default {
   getDrinks: function(query) {
     return axios.get("/api/drinks", { params: { q: query } });
+  },
+
+  handleDrinkClick: function(query) {
+    return axios.get('/api/drinks/:id', { params: {q: query } })
   }
 };

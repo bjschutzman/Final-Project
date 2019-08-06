@@ -13,7 +13,10 @@ const Recipes = (props) => (
           <div>
             <ul>
               {props.drinks.map(drink => (
-                <li key={drink.idDrink}>{drink.strDrink}</li>
+                <li 
+                key={drink.idDrink}
+                onClick={()=> {props.handleClick(drink);}}
+                >{drink.strDrink}</li>
               ))} 
             </ul>
           </div>
