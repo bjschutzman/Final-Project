@@ -34,9 +34,6 @@ handleDrinkClick = (drink) => {
   
   console.log('DRINK:', drink)
   this.setState({selectedDrink: drink});
-  // API.handleDrinkClick(this.state.drinkClicked)
-  //   .then(res => this.setState({ drinkClicked: res.data.drinks.strDrink}))
-  //   .catch(err => console.log(err));
 }
 
 // will take the drink clicked by the user and set the state to that drink

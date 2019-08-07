@@ -23,7 +23,7 @@ const Ingredients = (props) => (
         <Card.Text>
           Instructions: {props.selectedDrink && props.selectedDrink.strInstructions}
           <p></p>
-          Ingredients: {props.selectedDrink && getIngredients(props.selectedDrink).map(ingredient => <div>{ingredient}</div>)}
+          Ingredients: {props.selectedDrink && getIngredients(props.selectedDrink).map(ingredient => <div><ul>{ingredient}</ul></div>)}
         </Card.Text>
         <Button variant="primary">Make Shopping List</Button>
       </Card.Body>

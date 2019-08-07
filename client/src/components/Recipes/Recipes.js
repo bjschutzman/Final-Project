@@ -13,7 +13,7 @@ const Recipes = (props) => (
           <div>
             <ul>
               {props.drinks.map(drink => (
-                <li 
+                <li className = 'drinkChoice'
                 key={drink.idDrink}
                 onClick={()=> {props.handleClick(drink);}}
                 >{drink.strDrink}</li>
@@ -21,7 +21,6 @@ const Recipes = (props) => (
             </ul>
           </div>
         </Card.Text>
-        <Button variant="primary">See Ingredients</Button>
       </Card.Body>
     </Card>
   </div>

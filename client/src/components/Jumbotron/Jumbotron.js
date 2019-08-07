@@ -11,7 +11,7 @@ const Jumbo = (props) => {
   <div>
     <Jumbotron fluid className="backImage">
       <Container>
-        <h1>Cocktail Wizard</h1>
+        <h1 className= 'title'>Cocktail Wizard</h1>
         <p className = 'paragraph'>
           Search for your desired cocktail and see what it takes to make it.
           Then, create a shopping cart of the items your need to make your
