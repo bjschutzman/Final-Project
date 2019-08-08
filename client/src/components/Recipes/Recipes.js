@@ -1,9 +1,9 @@
 import React from "react";
 import "./Recipes.css";
-import Button from "react-bootstrap/Button";
+
 import Card from "react-bootstrap/Card";
 
-const Recipes = (props) => (
+const Recipes = props => (
   <div>
     <Card>
       <Card.Header as="h5">Recipes</Card.Header>
@@ -13,11 +13,16 @@ const Recipes = (props) => (
           <div>
             <ul>
               {props.drinks.map(drink => (
-                <li className = 'drinkChoice'
-                key={drink.idDrink}
-                onClick={()=> {props.handleClick(drink);}}
-                >{drink.strDrink}</li>
-              ))} 
+                <li
+                  className="drinkChoice"
+                  key={drink.idDrink}
+                  onClick={() => {
+                    props.handleClick(drink);
+                  }}
+                >
+                  {drink.strDrink}
+                </li>
+              ))}
             </ul>
           </div>
         </Card.Text>

@@ -8,6 +8,10 @@ export default {
   },
 
   handleDrinkClick: function(query) {
-    return axios.get('/api/drinks/:id', { params: {q: query } })
+    return axios.get("/api/drinks/:id", { params: { q: query } });
+  },
+
+  saveDrink: function(drinkData) {
+    return axios.post("/api/drinks", drinkData);
   }
 };
