@@ -21,7 +21,7 @@ class Navs extends Component {
               Home
             </Nav.Link>
             <Nav.Link href="#link" style={whiteText}>
-              Recipes
+              Store/Saved
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
