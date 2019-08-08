@@ -1,6 +1,6 @@
 import React from "react";
 import "./Recipes.css";
-import Button from "react-bootstrap/Button";
+
 import Card from "react-bootstrap/Card";
 
 const Recipes = (props) => (

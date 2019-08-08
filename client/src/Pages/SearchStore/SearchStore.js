@@ -8,7 +8,7 @@ import Ingredients from "../../components/Ingredients/Ingredients";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import "./SearchRec.css";
+import "./SearchStore.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -64,7 +64,6 @@ handleChange = event => {
           <Jumbo  
           handleClick={this.handleFormSubmit}
           handleChange={this.handleChange}/>
-          
           <Container>
             <Row>
               <Col>

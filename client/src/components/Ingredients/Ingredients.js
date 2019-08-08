@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./Ingredients.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+
 
 const getIngredients = (drink) => {
   let drinkList = [];
@@ -25,10 +27,27 @@ const Ingredients = (props) => (
           <p></p>
           Ingredients: {props.selectedDrink && getIngredients(props.selectedDrink).map(ingredient => <div><ul>{ingredient}</ul></div>)}
         </Card.Text>
-        <Button variant="primary">Make Shopping List</Button>
+        <Link 
+        
+        to = {props.selectedDrink ? 
+          "/shopping/" :
+          null}>
+        <Button variant="primary">Make Shopping List
+        
+        
+        
+      
+        </Button>
+        </Link> 
       </Card.Body>
     </Card>
   </div>
 );
+// {props.drinks.map(drink => (
+//   <li className = 'drinkChoice'
+//   key={drink.idDrink}
+//   onClick={()=> {props.handleClick(drink);}}
+//   >{drink.strDrink}</li>
+// ))} 
 
 export default Ingredients;
