@@ -32,12 +32,7 @@ const Ingredients = (props) => (
         to = {props.selectedDrink ? 
           "/shopping/" :
           null}>
-        <Button variant="primary">Make Shopping List
-        
-        
-        
-      
-        </Button>
+        <Button variant="primary">Make Shopping List </Button>
         </Link> 
       </Card.Body>
     </Card>
