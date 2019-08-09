@@ -49,10 +49,24 @@ class Search extends Component {
   save = event => {
     console.log(this.state.selectedDrink);
     event.preventDefault();
+    const ingredientList = [];
+    if (this.state.selectedDrink.strIngredient1 !== "") {
+      ingredientList.push(this.state.selectedDrink.strIngredient1);
+    }
+    if (this.state.selectedDrink.strIngredient2 !== "") {
+      ingredientList.push(this.state.selectedDrink.strIngredient2);
+    }
+    if (this.state.selectedDrink.strIngredient3 !== "") {
+      ingredientList.push(this.state.selectedDrink.strIngredient3);
+    }
+    if (this.state.selectedDrink.strIngredient4 !== "") {
+      ingredientList.push(this.state.selectedDrink.strIngredient4);
+    }
+    console.log(ingredientList);
     API.saveDrink({
       recipeName: this.state.selectedDrink.strDrink,
       recipeInstructions: this.state.selectedDrink.strInstructions,
-      recipeIngredients: this.state.selectedDrink.strIngredient1
+      recipeIngredients: ingredientList
     }).catch(err => console.log(err));
   };
 
