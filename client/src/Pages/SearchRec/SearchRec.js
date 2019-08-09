@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import axios from 'axios'
 import API from "../../utils/API";
 import Navs from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import Jumbo from "../../components/Jumbotron/Jumbotron";
 import Recipes from "../../components/Recipes/Recipes";
 import Ingredients from "../../components/Ingredients/Ingredients";
@@ -88,6 +89,7 @@ class Search extends Component {
             </Col>
           </Row>
         </Container>
+        <Footer />
       </div>
     );
   }
