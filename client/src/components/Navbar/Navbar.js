@@ -21,7 +21,10 @@ class Navs extends Component {
               Home
             </Nav.Link>
             <Nav.Link href="/shopping" style={whiteText}>
-              Store/Saved
+              Store
+            </Nav.Link>
+            <Nav.Link href="/saved" style={whiteText}>
+              Saved
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

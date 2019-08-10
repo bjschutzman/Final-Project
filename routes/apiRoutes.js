@@ -35,4 +35,6 @@ router.get("/drinks/:id", (req, res) => {
 console.log(RecipeController);
 router.route("/drinks").post(RecipeController.create);
 
+router.route("/saved").get(RecipeController.findAll);
+
 module.exports = router;

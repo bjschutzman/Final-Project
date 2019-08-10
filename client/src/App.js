@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Search from "../src/Pages/SearchRec/SearchRec";
 import Store from "../src/Pages/SearchStore/SearchStore";
+import Saved from "../src/Pages/Saved/saved";
 import "bootstrap/dist/css/bootstrap.min.css";
 import API from "../src/utils/API";
 
@@ -14,7 +15,8 @@ class App extends Component {
     selectedDrink: null,
     recipeName: "",
     recipeInstructions: "",
-    recipeIngredients: ""
+    recipeIngredients: "",
+    image: ""
   };
 
   handleFormSubmit = event => {
@@ -62,7 +64,8 @@ class App extends Component {
     API.saveDrink({
       recipeName: this.state.selectedDrink.strDrink,
       recipeInstructions: this.state.selectedDrink.strInstructions,
-      recipeIngredients: ingredientList
+      recipeIngredients: ingredientList,
+      image: this.state.selectedDrink.strDrinkThumb
     }).catch(err => console.log(err));
   };
 
@@ -97,6 +100,7 @@ class App extends Component {
           />
 
           <Route exact path="/shopping/" component={Store} />
+          <Route exact path="/saved/" component={Saved} />
         </Router>
       </div>
     );

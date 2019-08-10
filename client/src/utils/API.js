@@ -13,5 +13,8 @@ export default {
 
   saveDrink: function(drinkData) {
     return axios.post("/api/drinks", drinkData);
+  },
+  getSavedDrinks: function(drinkData) {
+    return axios.get("/api/saved", drinkData);
   }
 };
