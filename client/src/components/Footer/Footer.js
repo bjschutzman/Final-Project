@@ -11,7 +11,11 @@ class Footer extends Component {
       <div>
         <br />
         <br />
-        <Nav className="justify-content-center" activeKey="/home">
+        <Nav
+          sticky="bottom"
+          className="justify-content-center"
+          activeKey="/home"
+        >
           <p style={whiteText}>Cocktail Wizard</p>
         </Nav>
       </div>
