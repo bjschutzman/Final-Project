@@ -21,35 +21,19 @@ const Ingredients = props => (
     <Card>
       <Card.Header as="h5">Store</Card.Header>
       <Card.Body>
-        <Card.Title>Seach Store</Card.Title>
-        <InputGroup className="mb-3">
-          <FormControl
-            placeholder="Store Search"
-            aria-label="Store Search"
-            aria-describedby="basic-addon2"
-            onChange={props.handleChange}
-          />
-          <InputGroup.Append>
-            <Button variant="outline-secondary" onClick={props.handleClick}>
-              Search
-            </Button>
-          </InputGroup.Append>
-        </InputGroup>
+        <Card.Title>Mojito</Card.Title>
         <Card.Text>
-          Instructions:{" "}
-          {props.selectedDrink && props.selectedDrink.strInstructions}
-          <p />
-          Ingredients:{" "}
-          {props.selectedDrink &&
-            SearchStoreIngredients(props.selectedDrink).map(ingredient => (
-              <div>
-                <ul>{ingredient}</ul>
-              </div>
-            ))}
+          <ul>
+          <li>Bacardi Superior 750ml   $11.99</li>
+          <li>Lime                     $0.49</li>
+          <li>Domino Premium Sugar     $3.99</li>
+          <li>Goodness Gardens Mint    $2.99</li>
+          <li>Canada Dry Club Soda     $1.83</li>
+          </ul>
         </Card.Text>
-        <Link to={props.selectedDrink ? "/shopping/" : null}>
-          <Button variant="primary">Add to Cart </Button>
-        </Link>
+        <div className = 'total'>
+          Total: $21.29
+          </div>
       </Card.Body>
     </Card>
   </div>
