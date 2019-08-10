@@ -11,16 +11,16 @@ class Navs extends Component {
   render() {
     return (
       <Navbar bg="transparent" expand="lg">
-        <Navbar.Brand href="#home" style={whiteText}>
+        <Navbar.Brand href="/" style={whiteText}>
           Cocktail Wizard
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home" style={whiteText}>
+            <Nav.Link href="/" style={whiteText}>
               Home
             </Nav.Link>
-            <Nav.Link href="#link" style={whiteText}>
+            <Nav.Link href="/shopping" style={whiteText}>
               Store/Saved
             </Nav.Link>
           </Nav>
