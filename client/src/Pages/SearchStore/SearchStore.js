@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import axios from 'axios'
-// import API from '../../utils/API'
+import API from '../../utils/API'
 import SearchItem from '../../components/SearchItem/SearchItem'
 import Navs from "../../components/Navbar/Navbar";
 import Jumbo from "../../components/JumbotronTwo/Jumbotron"
@@ -12,12 +12,17 @@ import "./SearchStore.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
-class Search extends Component {
+class Store extends Component {
   state = {
-    drinks: [],
-    userInput: '',
-    selectedDrink: null
+    recipe: {}
   };
+
+  // componentDidMount() {
+  //   API.getDrinks(this.props.paramas.idDrink)
+  //   .then(res => this.setState({recipe: res.data}))
+  //   .catch(err => console.log(err));
+  //   console.log("COMPDID: "  )
+  // }
 
 
 
@@ -41,4 +46,4 @@ class Search extends Component {
     );
   }
 }
-export default Search;
+export default Store;

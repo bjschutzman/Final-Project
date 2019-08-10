@@ -12,7 +12,7 @@ const Recipes = props => (
         <Card.Text>
           <div>
             <ul>
-              {props.drinks.map(drink => (
+              {props.drinks && props.drinks.map(drink => (
                 <li
                   className="drinkChoice"
                   key={drink.idDrink}

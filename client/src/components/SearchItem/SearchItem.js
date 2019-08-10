@@ -37,9 +37,9 @@ const Ingredients = (props) => (
           </InputGroup.Append>
         </InputGroup>
         <Card.Text>
-          {/* Instructions: {props.selectedDrink && props.selectedDrink.strInstructions} */}
+          Instructions: {props.selectedDrink && props.selectedDrink.strInstructions}
           <p></p>
-          {/* Ingredients: {props.selectedDrink && SearchStoreIngredients(props.selectedDrink).map(ingredient => <div><ul>{ingredient}</ul></div>)} */}
+          Ingredients: {props.selectedDrink && SearchStoreIngredients(props.selectedDrink).map(ingredient => <div><ul>{ingredient}</ul></div>)}
         </Card.Text>
         <Link
 
