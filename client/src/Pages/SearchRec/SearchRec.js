@@ -2,6 +2,7 @@ import React from "react";
 // import axios from 'axios'
 // import API from "../../utils/API";
 import Navs from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import Jumbo from "../../components/Jumbotron/Jumbotron";
 import Recipes from "../../components/Recipes/Recipes";
 import Ingredients from "../../components/Ingredients/Ingredients";
@@ -45,6 +46,7 @@ const Search = props => {
   //   });
   // };
 
+<<<<<<< HEAD
   // save = event => {
   //   console.log(this.state.selectedDrink);
   //   event.preventDefault();
@@ -54,6 +56,31 @@ const Search = props => {
   //     recipeIngredients: this.state.selectedDrink.strIngredient1
   //   }).catch(err => console.log(err));
   // };
+=======
+  save = event => {
+    console.log(this.state.selectedDrink);
+    event.preventDefault();
+    const ingredientList = [];
+    if (this.state.selectedDrink.strIngredient1 !== "") {
+      ingredientList.push(this.state.selectedDrink.strIngredient1);
+    }
+    if (this.state.selectedDrink.strIngredient2 !== "") {
+      ingredientList.push(this.state.selectedDrink.strIngredient2);
+    }
+    if (this.state.selectedDrink.strIngredient3 !== "") {
+      ingredientList.push(this.state.selectedDrink.strIngredient3);
+    }
+    if (this.state.selectedDrink.strIngredient4 !== "") {
+      ingredientList.push(this.state.selectedDrink.strIngredient4);
+    }
+    console.log(ingredientList);
+    API.saveDrink({
+      recipeName: this.state.selectedDrink.strDrink,
+      recipeInstructions: this.state.selectedDrink.strInstructions,
+      recipeIngredients: ingredientList
+    }).catch(err => console.log(err));
+  };
+>>>>>>> dcf8dee7dd0ab2e6e3f786861cf61f8c525e19cb
 
   // handleChange = event => {
   //   const value = event.target.value;
@@ -87,6 +114,7 @@ const Search = props => {
             </Col>
           </Row>
         </Container>
+        <Footer />
       </div>
     )
   }
