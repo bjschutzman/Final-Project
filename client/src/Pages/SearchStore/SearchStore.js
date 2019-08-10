@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 // import axios from 'axios'
-<<<<<<< HEAD
-import API from '../../utils/API'
-import SearchItem from '../../components/SearchItem/SearchItem'
-=======
 import API from "../../utils/API";
->>>>>>> dcf8dee7dd0ab2e6e3f786861cf61f8c525e19cb
 import Navs from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Jumbo from "../../components/JumbotronTwo/Jumbotron";
@@ -17,22 +12,7 @@ import Container from "react-bootstrap/Container";
 import "./SearchStore.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-<<<<<<< HEAD
-
 class Store extends Component {
-  state = {
-    recipe: {}
-  };
-
-  // componentDidMount() {
-  //   API.getDrinks(this.props.paramas.idDrink)
-  //   .then(res => this.setState({recipe: res.data}))
-  //   .catch(err => console.log(err));
-  //   console.log("COMPDID: "  )
-  // }
-
-=======
-class Search extends Component {
   state = {
     drinks: [],
     userInput: "",
@@ -52,7 +32,6 @@ class Search extends Component {
     console.log("DRINK:", drink);
     this.setState({ selectedDrink: drink });
   };
->>>>>>> dcf8dee7dd0ab2e6e3f786861cf61f8c525e19cb
 
   // will take the drink clicked by the user and set the state to that drink
   userDrinkClicked = event => {
