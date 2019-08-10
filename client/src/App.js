@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Search from '../src/Pages/SearchRec/SearchRec'
-import Store from '../src/Pages/SearchStore/SearchStore';
+import Search from "../src/Pages/SearchRec/SearchRec";
+import Store from "../src/Pages/SearchStore/SearchStore";
 import "bootstrap/dist/css/bootstrap.min.css";
 import API from "../src/utils/API";
 
 import "./App.css";
-
 
 class App extends Component {
   state = {
@@ -42,8 +41,8 @@ class App extends Component {
     });
   };
 
-  
   save = event => {
+    console.log("click");
     console.log(this.state.selectedDrink);
     event.preventDefault();
     const ingredientList = [];
@@ -74,35 +73,34 @@ class App extends Component {
     });
   };
   render() {
-    return(
-      
+    return (
       <div>
         <Router>
-        <Route 
-        exact path = '/' 
-        render ={(props) => <Search {...props} 
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <Search
+                {...props}
+                drinks={this.state.drinks}
+                userInput={this.state.userInput}
+                selectedDrink={this.state.selectedDrink}
+                recipeName={this.state.recipeName}
+                recipeInstructions={this.state.handleDrinkClick}
+                recipeIngredients={this.state.recipeIngredients}
+                handleFormSubmit={this.handleFormSubmit}
+                handleChange={this.handleChange}
+                handleDrinkClick={this.handleDrinkClick}
+                save={this.save}
+              />
+            )}
+          />
 
-        drinks ={this.state.drinks}
-        userInput={this.state.userInput}
-        selectedDrink = {this.state.selectedDrink}
-        recipeName = {this.state. recipeName}
-        recipeInstructions = {this.state.handleDrinkClick}
-        recipeIngredients = {this.state.recipeIngredients}
-        handleFormSubmit = {this.handleFormSubmit}
-        handleChange = {this.handleChange}
-        handleDrinkClick = {this.handleDrinkClick}
-        
-
-        />}/>
-
-        <Route exact path = '/shopping/' component = {Store}/>
-
-      </Router>
+          <Route exact path="/shopping/" component={Store} />
+        </Router>
       </div>
-      
-    )
+    );
   }
 }
-
 
 export default App;
