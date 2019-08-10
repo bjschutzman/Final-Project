@@ -24,7 +24,7 @@ const Ingredients = (props) => (
     <Card>
       <Card.Header as="h5">Store</Card.Header>
       <Card.Body>
-        <Card.Title>Cocktail Ingredients</Card.Title>
+        <Card.Title>Seach Store</Card.Title>
         <InputGroup className="mb-3">
           <FormControl
             placeholder="Store Search"

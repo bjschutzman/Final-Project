@@ -95,7 +95,19 @@ class App extends Component {
 
         />}/>
 
-        <Route exact path = '/shopping/' component = {Store}/>
+        <Route exact path = '/shopping/' 
+        render = {(props) => <Store {...props}
+
+        drinks ={this.state.drinks}
+        userInput={this.state.userInput}
+        selectedDrink = {this.state.selectedDrink}
+        recipeName = {this.state. recipeName}
+        recipeInstructions = {this.state.handleDrinkClick}
+        recipeIngredients = {this.state.recipeIngredients}
+        handleFormSubmit = {this.handleFormSubmit}
+        handleChange = {this.handleChange}
+        handleDrinkClick = {this.handleDrinkClick}
+      />}/>
 
       </Router>
       </div>

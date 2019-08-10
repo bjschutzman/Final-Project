@@ -22,9 +22,18 @@ const Ingredients = (props) => (
       <Card.Body>
         <Card.Title>Cocktail Ingredients</Card.Title>
         <Card.Text>
-          Instructions: {props.selectedDrink && props.selectedDrink.strInstructions}
-          <p></p>
-          Ingredients: {props.selectedDrink && getIngredients(props.selectedDrink).map(ingredient => <div><ul>{ingredient}</ul></div>)}
+          <div>
+        Instructions:{" "}
+          {props.selectedDrink && props.selectedDrink.strInstructions}
+          <p />
+          Ingredients:{" "}
+          {props.selectedDrink &&
+            getIngredients(props.selectedDrink).map(ingredient => (
+              <div>
+                <ul>{ingredient}</ul>
+              </div>
+            ))}
+            </div>
         </Card.Text>
       </Card.Body>
     </Card>
