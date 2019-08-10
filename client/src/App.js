@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+<<<<<<< HEAD
 import Search from "../src/Pages/SearchRec/SearchRec";
 import Store from "../src/Pages/SearchStore/SearchStore";
 import Saved from "../src/Pages/Saved/saved";
+=======
+import Search from '../src/Pages/SearchRec/SearchRec'
+import Store from '../src/Pages/SearchStore/SearchStore';
+>>>>>>> 727a0f402c97f538ffd0a466840d0fdd887204a9
 import "bootstrap/dist/css/bootstrap.min.css";
 import API from "../src/utils/API";
 
 import "./App.css";
+
 
 class App extends Component {
   state = {
@@ -43,8 +49,8 @@ class App extends Component {
     });
   };
 
+  
   save = event => {
-    console.log("click");
     console.log(this.state.selectedDrink);
     event.preventDefault();
     const ingredientList = [];
@@ -76,35 +82,48 @@ class App extends Component {
     });
   };
   render() {
-    return (
+    return(
+      
       <div>
         <Router>
-          <Route
-            exact
-            path="/"
-            render={props => (
-              <Search
-                {...props}
-                drinks={this.state.drinks}
-                userInput={this.state.userInput}
-                selectedDrink={this.state.selectedDrink}
-                recipeName={this.state.recipeName}
-                recipeInstructions={this.state.handleDrinkClick}
-                recipeIngredients={this.state.recipeIngredients}
-                handleFormSubmit={this.handleFormSubmit}
-                handleChange={this.handleChange}
-                handleDrinkClick={this.handleDrinkClick}
-                save={this.save}
-              />
-            )}
-          />
+        <Route 
+        exact path = '/' 
+        render ={(props) => <Search {...props} 
 
-          <Route exact path="/shopping/" component={Store} />
-          <Route exact path="/saved/" component={Saved} />
-        </Router>
+        drinks ={this.state.drinks}
+        userInput={this.state.userInput}
+        selectedDrink = {this.state.selectedDrink}
+        recipeName = {this.state. recipeName}
+        recipeInstructions = {this.state.handleDrinkClick}
+        recipeIngredients = {this.state.recipeIngredients}
+        handleFormSubmit = {this.handleFormSubmit}
+        handleChange = {this.handleChange}
+        handleDrinkClick = {this.handleDrinkClick}
+        
+
+        />}/>
+
+        <Route exact path = '/shopping/' 
+        render = {(props) => <Store {...props}
+
+        drinks ={this.state.drinks}
+        userInput={this.state.userInput}
+        selectedDrink = {this.state.selectedDrink}
+        recipeName = {this.state. recipeName}
+        recipeInstructions = {this.state.handleDrinkClick}
+        recipeIngredients = {this.state.recipeIngredients}
+        handleFormSubmit = {this.handleFormSubmit}
+        handleChange = {this.handleChange}
+        handleDrinkClick = {this.handleDrinkClick}
+      />}/>
+
+
+      </Router>
       </div>
-    );
+      
+    )
   }
 }
+
 
 export default App;

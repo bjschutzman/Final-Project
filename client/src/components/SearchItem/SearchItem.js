@@ -1,30 +1,27 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./SearchItem.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 
-
-
-const SearchStoreIngredients = (drink) => {
+const SearchStoreIngredients = drink => {
   let drinkList = [];
   for (let [key, value] of Object.entries(drink)) {
-    if (value && key.indexOf('strIngredient') > -1) {
+    if (value && key.indexOf("strIngredient") > -1) {
       drinkList.push(value);
     }
   }
   return drinkList;
-}
+};
 
-
-const Ingredients = (props) => (
+const Ingredients = props => (
   <div>
     <Card>
       <Card.Header as="h5">Store</Card.Header>
       <Card.Body>
-        <Card.Title>Cocktail Ingredients</Card.Title>
+        <Card.Title>Seach Store</Card.Title>
         <InputGroup className="mb-3">
           <FormControl
             placeholder="Store Search"
@@ -33,19 +30,24 @@ const Ingredients = (props) => (
             onChange={props.handleChange}
           />
           <InputGroup.Append>
-            <Button variant="outline-secondary" onClick={props.handleClick}>Search</Button>
+            <Button variant="outline-secondary" onClick={props.handleClick}>
+              Search
+            </Button>
           </InputGroup.Append>
         </InputGroup>
         <Card.Text>
-          Instructions: {props.selectedDrink && props.selectedDrink.strInstructions}
-          <p></p>
-          Ingredients: {props.selectedDrink && SearchStoreIngredients(props.selectedDrink).map(ingredient => <div><ul>{ingredient}</ul></div>)}
+          Instructions:{" "}
+          {props.selectedDrink && props.selectedDrink.strInstructions}
+          <p />
+          Ingredients:{" "}
+          {props.selectedDrink &&
+            SearchStoreIngredients(props.selectedDrink).map(ingredient => (
+              <div>
+                <ul>{ingredient}</ul>
+              </div>
+            ))}
         </Card.Text>
-        <Link
-
-          to={props.selectedDrink ?
-            "/shopping/" :
-            null}>
+        <Link to={props.selectedDrink ? "/shopping/" : null}>
           <Button variant="primary">Add to Cart </Button>
         </Link>
       </Card.Body>
@@ -57,6 +59,6 @@ const Ingredients = (props) => (
 //   key={drink.idDrink}
 //   onClick={()=> {props.handleClick(drink);}}
 //   >{drink.strDrink}</li>
-// ))} 
+// ))}
 
 export default Ingredients;
