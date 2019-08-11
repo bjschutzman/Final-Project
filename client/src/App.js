@@ -93,6 +93,7 @@ class App extends Component {
                 handleFormSubmit={this.handleFormSubmit}
                 handleChange={this.handleChange}
                 handleDrinkClick={this.handleDrinkClick}
+                save={this.save}
               />
             )}
           />
